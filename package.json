@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/unimonkiez/react-native-asset.git"
+    "url": "git+https://github.com/callstack/react-native-asset.git"
   },
   "keywords": [
     "react-native",
@@ -28,9 +28,9 @@
   "author": "Yuval Saraf",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/unimonkiez/react-native-asset/issues"
+    "url": "https://github.com/callstack/react-native-asset/issues"
   },
-  "homepage": "https://github.com/unimonkiez/react-native-asset#readme",
+  "homepage": "https://github.com/callstack/react-native-asset#readme",
   "peerDependencies": {
     "react-native": ">=0.60.0"
   },
