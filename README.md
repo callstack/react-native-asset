@@ -10,9 +10,9 @@
 ## Usage
 * Install
   ```bash
-  npm install -g react-native-asset
+  npm install -g @callstack/react-native-asset
   # or yarn
-  yarn global add react-native-asset
+  yarn global add @callstack/react-native-asset
   ```
 * Add assets to your `react-native.config.js` as you would with `react-native link`
   ```js
