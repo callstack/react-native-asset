@@ -55,17 +55,20 @@ Instead this library writes `link-assets-manifest.json` to the root of `android`
 
 ### Android
 
-Font assets are linked in Android by using [XML resources](https://developer.android.com/develop/ui/views/text-and-emoji/fonts-in-xml). For instance, if you add the **Lato** font to your project, it will generate a `lato.xml` file in `android/app/src/main/res/font/` folder with all the font variants that you added. It will also add a method call in `MainApplication.java` file in order to register the custom font during the app initialization. It will look something like this:
+Font assets are linked in Android by using [XML resources](https://developer.android.com/develop/ui/views/text-and-emoji/fonts-in-xml). For instance, if you add the **Lato** font to your project, it will generate a `lato.xml` file in `android/app/src/main/res/font/` folder with all the font variants that you added. It will also add a method call in `MainApplication.kt` or `MainApplication.java` file in order to register the custom font during the app initialization. It will look something like this:
 
-```java
-public class MainApplication extends Application implements ReactApplication {
+```kotlin
+// other imports
 
-  // other methods...
+import com.facebook.react.common.assets.ReactFontManager // <- imports ReactFontManager.
 
-  @Override
-  public void onCreate() {
-    super.onCreate();
-    ReactFontManager.getInstance().addCustomFont(this, "Lato", R.font.lato); // <- registers the custom font.
+class MainApplication : Application(), ReactApplication {
+
+  // other methods
+
+  override fun onCreate() {
+    super.onCreate()
+    ReactFontManager.getInstance().addCustomFont(this, "Lato", R.font.lato) // <- registers the custom font.
     // ...
   }
 }
